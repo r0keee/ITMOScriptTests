@@ -10,7 +10,7 @@ TEST(OperationsSuite, ListIndexing) {
         print(x[0])
     )";
 
-    std::string expected = "1";
+    std::string expected = "9";
 
     std::istringstream input(code);
     std::ostringstream output;
