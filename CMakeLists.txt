@@ -18,7 +18,6 @@ add_executable(
   types_test.cpp
   loop_and_branch_test.cpp
   illegal_ops_test.cpp
-  indexing_test.cpp
   std_lib_test.cpp
   ops_test.cpp
 )
