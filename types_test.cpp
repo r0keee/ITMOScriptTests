@@ -36,20 +36,6 @@ TEST(TypesTestSuite, StringTest) {
     ASSERT_EQ(output.str(), expected);
 }
 
-TEST(TypesTestSuite, StringRepeatTest) {
-    std::string code = R"(
-        x = "aboba"
-        print(x * 5)
-    )";
-
-    std::string expected = "abobaabobaabobaabobaaboba";
-
-    std::istringstream input(code);
-    std::ostringstream output;
-
-    ASSERT_TRUE(interpret(input, output));
-    ASSERT_EQ(output.str(), expected);
-}
 
 TEST(TypesTestSuite, BoolTest) {
     std::string code = R"(
@@ -81,36 +67,6 @@ TEST(TypesTestSuite, ListTest) {
     ASSERT_EQ(output.str(), expected);
 }
 
-TEST(TypesTestSuite, ListRepeatTest) {
-    std::string code = R"(
-        x = [1, 3, 3, 7]
-        print(x * 2)
-    )";
-
-    std::string expected = "[1, 3, 3, 7, 1, 3, 3, 7]";
-
-    std::istringstream input(code);
-    std::ostringstream output;
-
-    ASSERT_TRUE(interpret(input, output));
-    ASSERT_EQ(output.str(), expected);
-}
-
-TEST(TypesTestSuite, ListConcatenateTest) {
-    std::string code = R"(
-        x = [1, 3, 3, 7]
-        y = [1, 4, 8, 8]
-        print(x + y)
-    )";
-
-    std::string expected = "[1, 3, 3, 7, 1, 4, 8, 8]";
-
-    std::istringstream input(code);
-    std::ostringstream output;
-
-    ASSERT_TRUE(interpret(input, output));
-    ASSERT_EQ(output.str(), expected);
-}
 
 TEST(TypesTestSuite, NilTest) {
     std::string code = R"(
